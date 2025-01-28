@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Publicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="postForm" (ngSubmit)="savePost()">
+    <!-- Campo de título -->
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input formControlName="title"></ion-input>
+    </ion-item>
+
+    <!-- Campo de descripción -->
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+
+    <!-- Botón para tomar foto con ícono de cámara -->
+    <ion-button expand="block" (click)="takePhoto()">
+      <ion-icon name="camera" slot="start"></ion-icon>
+      Tomar Foto
+    </ion-button>
+
+    <!-- Imagen previa si ya se ha tomado una foto -->
+    <div *ngIf="photo" style="text-align: center; margin-top: 10px;">
+      <img [src]="photo" alt="Foto tomada" style="max-width: 100%; border-radius: 10px;" />
+    </div>
+
+    <!-- Botón de guardar con ícono de guardar -->
+    <ion-button expand="block" type="submit">
+      <ion-icon name="save" slot="start"></ion-icon>
+      Guardar Publicación
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,20 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+ion-item {
+    margin: 10px 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  
+  ion-button {
+    --border-radius: 12px;
+    --background: #3880ff;
+    --color: white;
+  }
+  
